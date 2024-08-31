@@ -1,0 +1,27 @@
+{% extends "bootstrap/base.html"%}
+{% block content %}
+
+<style>
+
+
+</style>
+<div class="container">
+<div class="jumbotron txt-center">
+    <h3>Sentiment Analysis using NLP</h3>
+    <p>A Text Summarization Tool</p>
+</div>
+</div>
+
+<div class="container">
+    <form method="POST" action="{{ url_for('analyse')}}" id="myForm">
+        <label><strong>Enter the text below</strong></label><br>
+        <textarea class="form-control" rows="20" cols="40" name="rawtext">text here</textarea><br>
+
+        <input type="submit" onclick="myAnalyser()" value="submit" class="btn btn-primary">
+        <input type="submit" onclick="myFunction()" value="Clear" class="btn btn-outline-dark">
+
+        <a href="{{url_for('index')}}" type="button" class="btn btn-danger">Reset</a>
+    </form>
+</div>
+<br>
+</br>
