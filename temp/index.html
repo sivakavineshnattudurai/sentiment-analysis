@@ -41,6 +41,12 @@
                 <div class="text">
                     <h5>Your text</h5>
                     <p> Time Elapsed: <span style="color:#0091EA;">{{final_time}}</span> seconds to analyze</p>
+                    <p>This text is about:</p>
+                    {% for i in summary %}
+                    <ul class="list-group">
+                        <li class="list-group-item list-group-item-info"><span style="color: black;">{{i}}</span></li>
+                        <a href="https://www.dictionary.com/browse/{{i}}?s=" target="_blank" type="button" class="btn btn-outline-primary btn-sm" style="float:right;font-size:9px;color:#fff"></a>
+                    </ul>
                 </div>
             </div>
         </div>
